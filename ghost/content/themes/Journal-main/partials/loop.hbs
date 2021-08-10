@@ -1,0 +1,32 @@
+<div class="item mb-5">
+  <div class="row g-3 g-xl-3">
+    <div class="col-2 col-xl-3">
+      <img
+        class="img-fluid post-thumb"
+        src="{{img_url feature_image size="s"}}"
+        alt="image"
+      />
+    </div>
+    <div class="col">
+      <h3 class="title mb-1"><a
+          class="text-link"
+          href="{{url}}"
+        >{{title}}</a></h3>
+      <div class="meta mb-1"><span class="date">Published
+          <time
+            datetime="{{date
+              format="
+                                    YYYY-MM-DD"
+            }}"
+          >{{date}}</time></span><span class="time">{{reading_time}}
+          min read</span><span class="comment">
+
+        </span></div>
+      <div class="intro">
+        {{excerpt}}
+      </div>
+      <a class="text-link" href="{{url}}">Read more &rarr;</a>
+    </div>
+    <!--//col-->
+  </div>
+</div>
