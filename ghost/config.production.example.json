@@ -11,14 +11,14 @@
     }
   },
   "mail": {
-    "from": "tabletkindfire@gmail.com",
+    "from": "#",
     "transport": "SMTP",
     "options": {
       "host": "smtp-relay.sendinblue.com",
       "port": 587,
       "auth": {
-        "user": "",
-        "pass": ""
+        "user": "#",
+        "pass": "#"
       }
     }
   },

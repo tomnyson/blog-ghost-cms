@@ -2,6 +2,7 @@
 .idea/
 *.iml
 dbdata/*
+ghost/config.production.json
 # Certificates related files
 nginx/ssl/*.crt
 nginx/ssl/*.key
