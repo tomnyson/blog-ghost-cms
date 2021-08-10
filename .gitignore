@@ -10,3 +10,4 @@ nginx/ssl/*.key
 #Config files
 *.lab.json
 ghost/config.production.json
+*.log
