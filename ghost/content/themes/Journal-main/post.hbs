@@ -1,5 +1,4 @@
 {{!< default}} {{#post}} <article class="blog-post px-3 py-5 p-md-5">
-  <div class="container single-col-max-width">
     <header class="blog-post-header">
       <h2 class="title mb-2">{{title}}</h2>
       {{#is "post" }}
@@ -19,9 +18,7 @@
         <a href="{{url}}">{{name}}</a>
       </span>
       {{/foreach}}
-  </div>
   {{/get}}
-
   </header>
   <div class="blog-post-body">
     {{#if feature_image}}
