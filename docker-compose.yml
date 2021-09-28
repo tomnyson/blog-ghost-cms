@@ -18,8 +18,8 @@ services:
     container_name: ghost
     hostname: ghost
     volumes:
-      - $PWD/ghost/config.production.json:/var/lib/ghost/config.production.json
-      - $PWD/ghost/content:/var/lib/ghost/content
+      - ./ghost/config.production.json:/var/lib/ghost/config.production.json
+      - ./ghost/content:/var/lib/ghost/content
     expose:
       - "3306"
     environment: # this section can be commented to start in dev mode by default
