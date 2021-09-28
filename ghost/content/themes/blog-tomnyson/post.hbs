@@ -1,0 +1,54 @@
+{{!< default}} {{#post}} 
+<article class="blog-post px-3 py-5 p-md-5">
+   <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v11.0&appId=162139529304163&autoLogAppEvents=1" nonce="2nqz0Q33"></script>
+    <header class="blog-post-header">
+      <h2 class="title mb-2">{{title}}</h2>
+      {{#is "post" }}
+      <div class="meta mb-1"><span class="date">Published
+          <time datetime="{{date
+                  format=" YYYY-MM-DD" }}">{{date}}</time>
+        </span><span class="time">{{reading_time}}
+          min read</span>
+        <span class="comment">
+          {{authors separator=" | " prefix="Writer:"}}
+        </span>
+      </div>
+        <div class="wrapperTags">
+        {{#if primary_tag}}
+        <section class="tags">
+            <a href="{{primary_tag.url}}">{{primary_tag.name}}</a>
+        </section>
+        {{/if}}
+        </div>
+      {{!-- {{#get 'tags' limit='all' include='count.posts' order='count.posts desc'}}
+      <div class="wrapperTags"></div>
+      {{#foreach tags}}
+      <span class="tags">
+        <a href="{{url}}">{{name}}</a>
+      </span>
+      {{/foreach}}
+  {{/get}} --}}
+  </header>
+  <div class="blog-post-body">
+    {{#if feature_image}}
+    <figure class="blog-banner">
+      <img class="lazy" src="{{img_url feature_image size=" m"}}"
+        alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}">
+      {{#if feature_image_caption}}
+      <figcaption class="mt-2 text-center image-caption">{{feature_image_caption}}</figcaption>
+      {{/if}}
+      {{/if}}
+      {{/is}}
+      </figure>
+      {{content}}
+  </div>
+  {{#is "post"}}
+  {{> pagination}}
+  <div id="disqus_thread"></div>
+  
+  <div class="fb-comments" data-href="https://www.tomnysontech.com/{{slug}}" data-width="100%" data-numposts="20"></div>
+  {{/is}}
+  </article>
+
+  {{/post}}

@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 services:
   nginx:
@@ -21,7 +21,7 @@ services:
       - ./ghost/config.production.json:/var/lib/ghost/config.production.json
       - $PWD/ghost/content:/var/lib/ghost/content
     expose:
-    - "3306"
+      - "3306"
     environment: # this section can be commented to start in dev mode by default
       - url=http://localhost:3002
       - NODE_ENV=production # set either production or development, then it will load the respective config
@@ -30,10 +30,10 @@ services:
       - mysql
 
   mysql:
-    image: mysql:latest
+    image: mysql:5.7
     container_name: mysql
     volumes:
-       - ./dbdata:/var/lib/mysql  # Persist storage
+      - ./dbdata:/var/lib/mysql # Persist storage
     expose:
       - "3306"
     environment:
