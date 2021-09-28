@@ -18,7 +18,7 @@ services:
     container_name: ghost
     hostname: ghost
     volumes:
-      - ./ghost/config.production.json:/var/lib/ghost/config.production.json
+      - $PWD/ghost/config.production.json:/var/lib/ghost/config.production.json
       - $PWD/ghost/content:/var/lib/ghost/content
     expose:
       - "3306"
